@@ -337,7 +337,7 @@ section{position:relative}
 .sec-test{background:var(--cream);overflow:hidden}
 /* galeria em arco (padrao da LP do Mateus): 7 prints com o topo arredondado,
    cada um rodado e deslocado em Y; clicar abre o depoimento em tamanho real */
-.arco-wrap{margin:52px auto 0;max-width:1112px;display:grid;gap:26px}
+.arco-wrap{margin:26px auto 0;max-width:1112px;display:grid;gap:26px}
 .arco{display:flex;justify-content:center;align-items:flex-end;margin:0 auto;max-width:1112px;padding:44px 0 18px;perspective:900px}
 .arco.linha-2{padding-top:10px}
 .arco figure{position:relative;flex:0 0 262px;height:392px;margin:0 0 0 -30px;border-radius:130px 130px 20px 20px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(176,92,56,.24);outline:1px solid rgba(236,135,91,.28);cursor:zoom-in;transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease,outline-color .45s ease,filter .45s ease,opacity .45s ease}
@@ -388,6 +388,14 @@ section{position:relative}
 .form-box h3{font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:11px}
 .form-box h3 .fh{width:34px;height:34px;border-radius:50%;background:var(--grad-sage);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .form-box h3 .fh svg{width:18px;height:18px;stroke:#fff;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+/* SEC 8b — FORMACAO (bloco saido de dentro do "Sobre mim") */
+.sec-forma{background:var(--cream);overflow:hidden}
+.sec-forma .form-box{margin:0 auto;max-width:920px;padding:34px 38px}
+.sec-forma .form-box::after{left:38px;width:78px}
+.sec-forma .form-box h3{font-size:24px;margin-bottom:22px}
+.sec-forma .form-box h3 .fh{width:40px;height:40px}
+.sec-forma .form-box h3 .fh svg{width:21px;height:21px}
+.sec-forma .res-list{grid-template-columns:1fr 1fr;gap:14px 34px}
 .sobre-final{max-width:660px;margin:56px 0 0 auto;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(19px,2.4vw,26px);color:var(--ink);line-height:1.3}
 .sobre-final span{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:16px;color:var(--texto);margin-top:12px;line-height:1.65}
 .seal{position:relative;width:132px;height:132px}
@@ -494,6 +502,8 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .of-bg .b2{width:194px;bottom:30px;left:-66px}
   .of-bg .b3{width:200px;bottom:70px;right:-74px}
   .price-box-shell{flex:auto;max-width:100%;width:100%}
+  .sec-forma .form-box{max-width:620px}
+  .sec-forma .res-list{grid-template-columns:1fr;gap:12px}
   .sobre-split{grid-template-columns:1fr;gap:60px}
   .sobre-visual{order:-1;max-width:360px;margin:0 auto}
   .imag-grid:hover .imag-card{opacity:1;filter:none}
@@ -574,6 +584,9 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .seal .seal-core{width:56%;height:56%}
   .seal .seal-core .sc-num{font-size:13px}
   .form-box{padding:24px 20px}
+  .sec-forma .form-box{padding:26px 22px}
+  .sec-forma .form-box::after{left:22px;width:60px}
+  .sec-forma .form-box h3{font-size:21px;margin-bottom:18px}
 }
 @keyframes im-shimmer-x{0%{background-position:0% 0%}100%{background-position:300% 0%}}
 </style>
@@ -1053,23 +1066,29 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
         <p>No entanto, a minha maior aprendizagem não aconteceu nas formações, nem no consultório.</p>
         <p>Aconteceu em casa! <strong>Sou mãe de 2 crianças</strong> e vivi duas experiências de introdução alimentar completamente diferentes. A primeira fez-me perceber o quanto ainda existem tantos mitos e recomendações desatualizadas sobre a diversificação alimentar dos bebés, e despertou em mim a vontade de aprofundar-me ainda mais nesta área e agarrar a missão do combate à desinformação. A segunda mostrou-me que, mesmo quando já sabemos muito sobre o tema, cada bebé é único e terá os seus próprios desafios &mdash; que nos fazem ter de saber gerir MUITO bem as nossas expectativas.</p>
         <p>Foi precisamente daquilo que aprendi ao acompanhar famílias, da minha experiência enquanto mãe e da formação contínua nesta área que nasceu o curso As Primeiras Comidinhas. Um curso criado para reunir, num único lugar, a informação que gostaria que todas as famílias tivessem acesso nesta fase: prática, clara e baseada nas recomendações mais atuais, para que possam tomar decisões informadas e viver a introdução alimentar com muito mais segurança e confiança.</p>
-        <div class="form-box">
-          <h3><span class="fh"><svg viewBox="0 0 24 24"><path d="M12 4L3 8.5 12 13l9-4.5L12 4z"/><path d="M7 11v4.2c0 1.3 2.2 2.3 5 2.3s5-1 5-2.3V11"/></svg></span>Formação</h3>
-          <ul class="res-list">
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Nutricionista, membro efetivo da Ordem dos Nutricionistas (C.P. 2069N)</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Pós-Graduação em Nutrição Pediátrica e Escolar</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Pós-Graduação em Higiene e Segurança Alimentar</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Formação avançada em Introdução Alimentar &mdash; um método individualizado</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Curso de Suporte Básico de Vida Pediátrico</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Curso de Primeiros Socorros Pediátricos</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Certificação de Profissionais de Saúde Neurocompatíveis&reg;</li>
-            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Certificação em Get Permission Approach&reg;</li>
-          </ul>
-        </div>
       </div>
     </div>
     <p class="sobre-final sr-hidden">A introdução alimentar não precisa de pais perfeitos.<span>Precisa de pais informados, confiantes e preparados para se adaptarem ao seu bebé.</span></p>
     <div class="cta-row cta-dir"><a href="#investimento" class="btn lg">Começar agora</a></div>
+  </div>
+</section>
+
+<!-- ============ SECÇÃO 8b — FORMAÇÃO ============ -->
+<section class="sec sec-forma">
+  <div class="wrap">
+    <div class="form-box sr-hidden">
+      <h3><span class="fh"><svg viewBox="0 0 24 24"><path d="M12 4L3 8.5 12 13l9-4.5L12 4z"/><path d="M7 11v4.2c0 1.3 2.2 2.3 5 2.3s5-1 5-2.3V11"/></svg></span>Formação</h3>
+      <ul class="res-list">
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Nutricionista, membro efetivo da Ordem dos Nutricionistas (C.P. 2069N)</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Pós-Graduação em Nutrição Pediátrica e Escolar</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Pós-Graduação em Higiene e Segurança Alimentar</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Formação avançada em Introdução Alimentar &mdash; um método individualizado</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Curso de Suporte Básico de Vida Pediátrico</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Curso de Primeiros Socorros Pediátricos</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Certificação de Profissionais de Saúde Neurocompatíveis&reg;</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Certificação em Get Permission Approach&reg;</li>
+      </ul>
+    </div>
   </div>
 </section>
 
