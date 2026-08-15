@@ -41,12 +41,16 @@ section{position:relative}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 .center{text-align:center}
 .maxw{max-width:760px;margin:0 auto}
+.maxw-lg{max-width:980px;margin:0 auto}
+.duv-body-sm{max-width:600px}
+.duv-body-sm p{font-size:15.2px}
 .txt-grad{background:linear-gradient(120deg,#EC875B 0%,#C7623A 52%,#BD6273 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#9A4557}
 .sec{padding:88px 0;position:relative}
 .sec h2{font-size:clamp(29px,3.7vw,48px);margin-bottom:16px;line-height:1.1}
 .sec .lead{font-size:17px;color:var(--texto)}
 .sec .lead strong{color:var(--ink);font-weight:600}
 .cta-row{display:flex;justify-content:center;margin-top:46px}
+.cta-dir{max-width:660px;margin-left:auto;margin-right:0}
 /* EYEBROW */
 .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--grad-sage-claro);color:#5A2A33;font-size:11.5px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;padding:8px 17px;border-radius:50px;box-shadow:0 4px 16px rgba(236,135,91,.28);max-width:max-content}
 .eyebrow.coral{background:var(--grad-coral);color:#5A2A33}
@@ -82,25 +86,16 @@ section{position:relative}
 @keyframes ringPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.8;transform:scale(1.02)}}
 @media(prefers-reduced-motion:reduce){.prod-frame::before,.prod-ring,.prod-glow{animation:none}}
 /* HERO */
-.hero{padding:64px 0 92px;background:var(--grad-warm);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 60% 50% at 82% 30%,rgba(189,98,115,.16),transparent 70%),radial-gradient(ellipse 55% 55% at 12% 78%,rgba(236,135,91,.14),transparent 72%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center;position:relative;z-index:2}
+.hero{padding:132px 0 148px;background:url("assets/arte/hero-bg.jpg") right center/auto 100% no-repeat,#F7F4EF;overflow:hidden;isolation:isolate}
+.hero .wrap{max-width:1320px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,600px) 1fr;gap:52px;align-items:center;position:relative;z-index:2}
 .hero-logo{display:block;width:100%;max-width:360px;height:auto;margin:0 0 24px}
 .hero .pretitle{display:inline-flex;align-items:flex-start;gap:9px;font-size:12px;font-weight:600;letter-spacing:.6px;color:var(--sage-esc);background:rgba(255,255,255,.72);border:1px solid var(--linha);border-radius:50px;padding:9px 18px;margin-bottom:20px;box-shadow:0 3px 12px rgba(176,92,56,.08);line-height:1.4;max-width:520px}
 .hero .pretitle svg{width:16px;height:16px;flex-shrink:0;margin-top:1px;stroke:var(--coral-esc);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.hero h1{font-size:clamp(30px,4.2vw,50px);margin:0 0 18px;line-height:1.1}
-.hero .sub{font-size:clamp(14px,1.05vw,15.8px);max-width:540px;color:var(--texto);line-height:1.62;margin-bottom:26px}
+.hero h1{font-size:clamp(30px,4.4vw,52px);margin:0 0 18px;line-height:1.1}
+.hero .sub{font-size:clamp(14.5px,1.2vw,17.5px);max-width:none;color:var(--texto);line-height:1.62;margin-bottom:26px}
 .hero .sub strong{color:var(--ink);font-weight:600}
-.hero-visual{min-height:470px;position:relative;display:flex;align-items:center;justify-content:center}
-.hero-back{position:absolute;inset:0;z-index:0;pointer-events:none}
-.hero-back .hb{position:absolute;border-radius:20px;overflow:hidden;opacity:.5;filter:blur(1px) saturate(.9);box-shadow:0 14px 32px rgba(176,92,56,.16)}
-.hero-back .hb img{width:100%;height:100%;object-fit:cover;display:block}
-.hero-back .hb1{width:44%;aspect-ratio:1/1.18;top:1%;left:-3%}
-.hero-back .hb2{width:37%;aspect-ratio:1/1;top:-3%;right:-2%}
-.hero-back .hb3{width:35%;aspect-ratio:1/1.12;bottom:3%;left:0}
-.hero-back .hb4{width:41%;aspect-ratio:1.15/1;bottom:-2%;right:-4%}
-.hero-photo{position:relative;width:100%;max-width:340px;margin:0 auto;z-index:2}
-.hero-photo .prod-frame{aspect-ratio:4/5}
+.hero-visual{min-height:430px}
 /* MARQUEE X DUPLO */
 .marquee{background:transparent;position:relative;z-index:40;display:flex;flex-direction:column}
 .marquee-bar{position:relative;width:100%;overflow:hidden;white-space:nowrap;padding:26px 0}
@@ -108,8 +103,8 @@ section{position:relative}
 .marquee-bar.front{background:rgba(189,98,115,.14);border-bottom:1px solid rgba(189,98,115,.2)}
 .marquee-track{display:inline-flex;width:max-content;will-change:transform}
 .marquee-track .mq-seg{display:inline-flex;flex:0 0 auto;align-items:center}
-.marquee-bar.front .marquee-track{animation:mq-scroll 34s linear infinite}
-.marquee-bar.back .marquee-track{animation:mq-scroll-rev 38s linear infinite}
+.marquee-bar.front .marquee-track{animation:mq-scroll 78s linear infinite}
+.marquee-bar.back .marquee-track{animation:mq-scroll-rev 86s linear infinite}
 .marquee-track span{font-family:'Inter',sans-serif;font-weight:400;font-size:clamp(20px,2.4vw,30px);letter-spacing:.6px;text-transform:none;padding:0 20px;white-space:nowrap}
 .marquee-bar.front .marquee-track span{color:#9A4557}
 .marquee-bar.back .marquee-track span{color:#C05F31}
@@ -123,8 +118,8 @@ section{position:relative}
 .strip .marquee-track{padding:26px 0}
 .strip.sage{background:rgba(236,135,91,.16);border-top:1px solid rgba(236,135,91,.22);border-bottom:1px solid rgba(236,135,91,.22)}
 .strip.coral{background:rgba(243,213,125,.22);border-bottom:1px solid rgba(216,178,76,.28)}
-.strip .strip-a{animation:mq-scroll 44s linear infinite}
-.strip .strip-b{animation:mq-scroll-rev 50s linear infinite}
+.strip .strip-a{animation:mq-scroll 96s linear infinite}
+.strip .strip-b{animation:mq-scroll-rev 106s linear infinite}
 .strip span{font-family:'Inter',sans-serif;font-weight:400;font-size:clamp(20px,2.4vw,30px);letter-spacing:.6px;text-transform:none;padding:0 20px;white-space:nowrap}
 .strip.sage span{color:#C05F31}
 .strip.coral span{color:#8A6A20}
@@ -255,15 +250,18 @@ section{position:relative}
 .sec-bonus{background:var(--grad-warm);overflow:hidden}
 .sec-bonus::before{content:"";position:absolute;top:0;right:0;width:56%;height:6px;background:linear-gradient(270deg,var(--coral),var(--sage) 50%,transparent);filter:drop-shadow(0 0 6px rgba(189,98,115,.4));pointer-events:none;z-index:3}
 .sec-bonus::after{content:"";position:absolute;bottom:0;left:0;width:56%;height:6px;background:linear-gradient(90deg,var(--sage),var(--coral) 50%,transparent);filter:drop-shadow(0 0 6px rgba(236,135,91,.4));pointer-events:none;z-index:3}
-.mc-solo{position:relative;max-width:760px;margin:44px auto 0;display:grid;grid-template-columns:96px 1fr;gap:24px;align-items:center;padding:30px 34px;background:linear-gradient(150deg,#FFFFFF 0%,#FDF6F2 100%);border-radius:24px;box-shadow:var(--sh-soft)}
-.mc-solo::before{content:"";position:absolute;inset:0;border-radius:24px;padding:2px;background:conic-gradient(from var(--angle),rgba(236,135,91,0) 0deg,rgba(236,135,91,0) 200deg,var(--sage) 260deg,var(--coral) 310deg,#fff 330deg,var(--sage) 350deg,rgba(236,135,91,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:0}
+.mc-solo{position:relative;max-width:900px;margin:52px auto 0;display:grid;grid-template-columns:132px 1fr;gap:34px;align-items:center;padding:52px 56px;background:#fff;border-radius:28px;box-shadow:0 26px 60px rgba(176,92,56,.16)}
+.mc-solo::before{content:"";position:absolute;inset:0;border-radius:28px;padding:2px;background:conic-gradient(from var(--angle),rgba(236,135,91,0) 0deg,rgba(236,135,91,0) 200deg,var(--sage) 260deg,var(--coral) 310deg,#fff 330deg,var(--sage) 350deg,rgba(236,135,91,0) 360deg);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;animation:angleSpin 6s linear infinite;pointer-events:none;z-index:0}
 .mc-solo>*{position:relative;z-index:1}
 @media(prefers-reduced-motion:reduce){.mc-solo::before{animation:none}}
-.mc-solo .mcs-ico{width:96px;height:96px;border-radius:50%;background:var(--grad-coral);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(189,98,115,.36),inset 0 0 0 2px rgba(255,255,255,.5)}
-.mc-solo .mcs-ico svg{width:44px;height:44px;stroke:#fff;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.mc-solo .tag{display:inline-flex;background:var(--grad-sage-claro);color:#5A2A33;font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:10px}
-.mc-solo h3{font-size:clamp(19px,2.3vw,24px);line-height:1.26;margin-bottom:8px;color:var(--coral-esc)}
-.mc-solo p{font-size:14.6px;color:var(--texto);line-height:1.6}
+.mc-solo .mcs-ico{position:relative;width:132px;height:132px;border-radius:50%;background:var(--grad-coral);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 32px rgba(189,98,115,.34),inset 0 0 0 2px rgba(255,255,255,.55)}
+.mc-solo .mcs-ico::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(189,98,115,.3);pointer-events:none}
+.mc-solo .mcs-ico::after{content:"";position:absolute;inset:-28px;border-radius:50%;border:1px solid rgba(189,98,115,.16);pointer-events:none}
+.mc-solo .mcs-ico svg{width:58px;height:58px;stroke:#fff;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mc-solo .tag{display:inline-flex;background:transparent;border:1.5px solid rgba(236,135,91,.55);color:var(--sage-esc);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:7px 16px;border-radius:50px;margin-bottom:16px}
+.mc-solo h3{font-size:clamp(23px,3vw,34px);line-height:1.18;margin-bottom:12px;color:var(--ink);letter-spacing:-.5px}
+.mc-solo h3 em{font-style:normal;color:var(--coral-esc)}
+.mc-solo p{font-size:16px;color:var(--texto);line-height:1.62;max-width:520px}
 .bonus-sub{text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(20px,2.5vw,28px);color:var(--ink);margin:72px auto 0;max-width:760px;line-height:1.28}
 .bonus-sub span{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:16px;color:var(--texto);margin-top:10px;line-height:1.6}
 .esp-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 22px;max-width:1080px;margin:44px auto 0}
@@ -293,11 +291,13 @@ section{position:relative}
 .bm-arrow.next{right:2px}
 .bm-arrow:hover{background:var(--cream2)}
 /* SEC 6 — INVESTIMENTO */
-.sec-oferta{background:var(--paper);overflow:hidden}
+.sec-oferta{background:var(--paper);overflow:hidden;padding-top:132px}
 .sec-oferta::before,.sec-oferta::after{content:"";position:absolute;left:0;width:100%;height:2px;background:linear-gradient(90deg,transparent,var(--sage),transparent);pointer-events:none;z-index:2}
 .sec-oferta::before{top:0}.sec-oferta::after{bottom:0}
-.price-wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;max-width:1040px;margin:46px auto 0}
-.price-side{flex:0 0 520px;align-self:center;background:#fff;border:1px solid rgba(236,135,91,.34);border-radius:22px;box-shadow:var(--sh-soft);padding:36px 38px 36px 82px;margin-left:-56px;z-index:0}
+.price-wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;max-width:1040px;margin:138px auto 0}
+.price-side-shell{position:relative;flex:0 0 520px;align-self:center;margin-left:-56px;z-index:0}
+.price-photo{position:absolute;right:-34px;top:-190px;width:300px;height:auto;z-index:0;pointer-events:none;border-radius:22px;transform:rotate(3deg);box-shadow:0 22px 46px rgba(176,92,56,.26);-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.35) 88%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 62%,rgba(0,0,0,.35) 88%,transparent 100%)}
+.price-side{position:relative;z-index:1;background:#fff;border:1px solid rgba(236,135,91,.34);border-radius:22px;box-shadow:var(--sh-soft);padding:36px 38px 36px 82px}
 .price-side .urg{display:inline-flex;align-items:center;gap:8px;background:rgba(189,98,115,.14);border:1px solid rgba(189,98,115,.4);color:var(--coral-esc);font-weight:700;font-size:12.5px;letter-spacing:.8px;text-transform:uppercase;padding:9px 18px;border-radius:50px;margin-bottom:20px}
 .price-side ul{list-style:none;display:grid;gap:12px}
 .price-side li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--ink);line-height:1.45}
@@ -317,14 +317,21 @@ section{position:relative}
 .price-box .inst{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(32px,3.7vw,44px);color:var(--coral-esc);line-height:1;margin:0 0 26px}
 .price-box .btn{width:100%}
 .price-box .pay-note{margin-top:18px;font-size:12.8px;font-weight:500;color:var(--texto);line-height:1.6}
-.price-after{max-width:760px;margin:44px auto 0;text-align:center;font-size:15.6px;color:var(--texto);line-height:1.72}
-.price-after b{color:var(--ink);font-weight:600}
+.price-after{max-width:820px;margin:56px auto 0;text-align:center}
+.price-after .pa-lead{font-size:16px;color:var(--texto);line-height:1.68;margin-bottom:22px}
+.price-after .pa-lead b{color:var(--ink);font-weight:600}
+.price-after .pa-hi{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(24px,3.2vw,36px);line-height:1.2;color:var(--ink);margin-bottom:16px;letter-spacing:-.4px}
+.price-after .pa-hi b{font-weight:800;background:linear-gradient(120deg,#EC875B 0%,#C7623A 52%,#BD6273 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#C7623A}
+.price-after .pa-sub{font-size:16.5px;color:var(--texto);line-height:1.74;max-width:700px;margin:0 auto}
+.price-after mark{background:linear-gradient(180deg,transparent 58%,rgba(243,213,125,.55) 58%);color:var(--ink);font-weight:600;padding:0 2px}
 /* SEC 7 — TESTEMUNHOS */
 .sec-test{background:var(--cream);overflow:hidden}
 /* galeria em arco (padrao da LP do Mateus): 7 prints com o topo arredondado,
    cada um rodado e deslocado em Y; clicar abre o depoimento em tamanho real */
-.arco{display:flex;justify-content:center;align-items:flex-end;margin:52px auto 0;max-width:1112px;padding:44px 0 18px;perspective:900px}
-.arco figure{position:relative;flex:0 0 178px;height:306px;margin:0 0 0 -26px;border-radius:88px 88px 18px 18px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(176,92,56,.24);outline:1px solid rgba(236,135,91,.28);cursor:zoom-in;transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease,outline-color .45s ease,filter .45s ease,opacity .45s ease}
+.arco-wrap{margin:52px auto 0;max-width:1112px;display:grid;gap:26px}
+.arco{display:flex;justify-content:center;align-items:flex-end;margin:0 auto;max-width:1112px;padding:44px 0 18px;perspective:900px}
+.arco.linha-2{padding-top:10px}
+.arco figure{position:relative;flex:0 0 262px;height:392px;margin:0 0 0 -30px;border-radius:130px 130px 20px 20px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(176,92,56,.24);outline:1px solid rgba(236,135,91,.28);cursor:zoom-in;transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s ease,outline-color .45s ease,filter .45s ease,opacity .45s ease}
 .arco figure:first-child{margin-left:0}
 .arco figure:nth-child(1){z-index:1}
 .arco figure:nth-child(2){z-index:2}
@@ -333,15 +340,15 @@ section{position:relative}
 .arco figure:nth-child(5){z-index:5}
 .arco figure:nth-child(6){z-index:6}
 .arco figure:nth-child(7){z-index:7}
-.arco figure img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;padding:14px 10px 10px;transition:transform .6s ease}
+.arco figure img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;padding:18px 14px 14px;transition:transform .6s ease}
 .arco figure::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 -34px 30px -30px rgba(176,92,56,.18)}
-.arco figure:nth-child(1){transform:translateY(52px) rotate(-10deg)}
-.arco figure:nth-child(2){transform:translateY(28px) rotate(-6.6deg)}
-.arco figure:nth-child(3){transform:translateY(9px) rotate(-3.3deg)}
-.arco figure:nth-child(4){transform:translateY(0) rotate(0deg)}
-.arco figure:nth-child(5){transform:translateY(9px) rotate(3.3deg)}
-.arco figure:nth-child(6){transform:translateY(28px) rotate(6.6deg)}
-.arco figure:nth-child(7){transform:translateY(52px) rotate(10deg)}
+.arco.linha-1 figure:nth-child(1){transform:translateY(34px) rotate(-7.5deg)}
+.arco.linha-1 figure:nth-child(2){transform:translateY(8px) rotate(-2.6deg)}
+.arco.linha-1 figure:nth-child(3){transform:translateY(8px) rotate(2.6deg)}
+.arco.linha-1 figure:nth-child(4){transform:translateY(34px) rotate(7.5deg)}
+.arco.linha-2 figure:nth-child(1){transform:translateY(26px) rotate(-5.4deg)}
+.arco.linha-2 figure:nth-child(2){transform:translateY(0) rotate(0deg)}
+.arco.linha-2 figure:nth-child(3){transform:translateY(26px) rotate(5.4deg)}
 @media(hover:hover){
   .arco:hover figure{opacity:.66;filter:saturate(.8)}
   .arco figure:hover{transform:translateY(-22px) rotate(0deg) scale(1.06);z-index:9;opacity:1;filter:none;outline-color:rgba(236,135,91,.7);box-shadow:0 26px 52px rgba(176,92,56,.34)}
@@ -355,12 +362,14 @@ section{position:relative}
 .tb-close{position:absolute;top:18px;right:20px;width:44px;height:44px;border:none;border-radius:50%;background:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.28)}
 .tb-close svg{width:20px;height:20px;stroke:var(--ink);stroke-width:2.6;fill:none;stroke-linecap:round}
 /* SEC 8 — SOBRE MIM */
-.sec-sobre{background:var(--grad-warm);overflow:hidden}
-.sobre-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
-.sobre-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:360px}
-.sobre-photo{position:relative;width:100%;max-width:360px;z-index:1}
-.sobre-photo .prod-frame{aspect-ratio:4/7}
-.sobre-seal{position:absolute;bottom:-26px;right:-16px;z-index:3;width:132px;height:132px}
+.sec-sobre{position:relative;background:#F1ECF3;overflow:hidden;padding-top:104px;padding-bottom:104px}
+/* arte da expert ancorada na base da coluna esquerda, com fade no topo e a direita */
+.sec-sobre::before{content:"";position:absolute;left:0;bottom:0;z-index:0;pointer-events:none;width:min(46%,640px);height:min(72%,700px);background:url("assets/arte/sobre-bg.jpg") center bottom/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 24%);mask-image:linear-gradient(180deg,transparent 0,#000 24%)}
+.sec-sobre::after{content:"";position:absolute;left:0;bottom:0;z-index:1;pointer-events:none;width:min(54%,760px);height:100%;background:linear-gradient(90deg,rgba(241,236,243,0) 52%,#F1ECF3 94%)}
+.sec-sobre .wrap{position:relative;z-index:2}
+.sobre-split{display:grid;grid-template-columns:.86fr 1.14fr;gap:52px;align-items:stretch}
+.sobre-visual{position:relative;display:flex;align-items:flex-end;justify-content:flex-end;min-height:420px}
+.sobre-seal{position:relative;z-index:3;width:132px;height:132px;margin:0 8px 8px 0}
 .sobre-body .eyebrow{margin-bottom:16px}
 .sobre-body h2{margin-bottom:16px}
 .sobre-body p{font-size:15.5px;color:var(--texto);margin-bottom:14px;line-height:1.7}
@@ -370,7 +379,7 @@ section{position:relative}
 .form-box h3{font-size:20px;margin-bottom:16px;display:flex;align-items:center;gap:11px}
 .form-box h3 .fh{width:34px;height:34px;border-radius:50%;background:var(--grad-sage);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .form-box h3 .fh svg{width:18px;height:18px;stroke:#fff;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.sobre-final{max-width:720px;margin:56px auto 0;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(19px,2.4vw,26px);color:var(--ink);line-height:1.3}
+.sobre-final{max-width:660px;margin:56px 0 0 auto;text-align:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:clamp(19px,2.4vw,26px);color:var(--ink);line-height:1.3}
 .sobre-final span{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:16px;color:var(--texto);margin-top:12px;line-height:1.65}
 .seal{position:relative;width:132px;height:132px}
 .seal .seal-glow{position:absolute;inset:-16px;border-radius:50%;background:radial-gradient(circle,rgba(236,135,91,.28),transparent 66%);animation:orbBreath 4.6s ease-in-out infinite}
@@ -443,12 +452,17 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .acr-node.n-right{transform:translate(-50%,-50%) translateX(102px)}
   .acr-node.n-bot{transform:translate(-50%,-50%) translateY(102px)}
   .acr-node.n-left{transform:translate(-50%,-50%) translateX(-102px)}
-  .arco figure{flex:0 0 168px;height:272px;margin-left:-28px;border-radius:84px 84px 16px 16px}
+  .arco figure{flex:0 0 216px;height:330px;margin-left:-26px;border-radius:108px 108px 18px 18px}
 }
 @media(max-width:960px){
-  .hero-grid{grid-template-columns:1fr;gap:38px}
-  .hero-visual{order:2;min-height:380px}
-  .hero-photo{max-width:min(70vw,320px)}
+  /* a arte da expert desce para a base: o texto fica sempre sobre fundo liso */
+  .hero{padding:56px 0 320px;background:url("assets/arte/hero-bg.jpg") center bottom/auto 330px no-repeat,#F7F4EF}
+  .hero .wrap{max-width:1160px}
+  .hero-grid{grid-template-columns:1fr;gap:0}
+  .hero-visual{display:none}
+  .sec-sobre::before{width:min(64%,330px);height:min(48%,430px)}
+  .sec-sobre::after{width:100%;background:linear-gradient(90deg,rgba(241,236,243,.4) 0%,rgba(241,236,243,.9) 46%,#F1ECF3 100%)}
+  .sobre-final,.cta-dir{margin-left:auto;margin-right:auto;max-width:none}
   .mod-grid{grid-template-columns:repeat(2,1fr);gap:40px 0}
   .mod-card:not(:nth-child(3n+1))::before{content:none}
   .mod-card:not(:nth-child(2n+1))::before{content:"";position:absolute;left:0;top:6%;height:88%;width:1px;background:linear-gradient(to bottom,transparent,rgba(236,135,91,.42) 22%,rgba(236,135,91,.42) 78%,transparent)}
@@ -457,7 +471,9 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .res-split{grid-template-columns:1fr;gap:34px;max-width:620px}
   .mc-solo{grid-template-columns:1fr;text-align:center;justify-items:center;gap:18px;padding:30px 26px}
   .price-wrap{flex-direction:column;align-items:stretch;max-width:520px}
-  .price-side{flex:auto;align-self:auto;border-radius:0 0 22px 22px;margin-left:0;margin-top:-30px;padding:60px 30px 34px}
+  .price-side-shell{flex:auto;align-self:auto;margin-left:0;margin-top:-30px}
+  .price-side{border-radius:0 0 22px 22px;padding:60px 30px 34px}
+  .price-photo{display:none}
   .price-box-shell{flex:auto;max-width:100%;width:100%}
   .sobre-split{grid-template-columns:1fr;gap:60px}
   .sobre-visual{order:-1;max-width:360px;margin:0 auto}
@@ -467,9 +483,10 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .acr-q{grid-column:1!important;grid-row:auto!important;width:96px;height:96px;border-radius:18px!important;margin:0}
   .acr-node{display:none}
   /* arco vira grelha no tablet/telemovel: print rodado nao se le */
-  .arco{flex-wrap:wrap;justify-content:center;gap:14px;padding:10px 0 0;max-width:620px}
-  .arco figure{flex:0 0 calc(33.333% - 10px);height:230px;margin-left:0;border-radius:76px 76px 14px 14px}
-  .arco figure:nth-child(n){transform:none}
+  .arco-wrap{gap:14px;max-width:620px}
+  .arco,.arco.linha-2{flex-wrap:wrap;justify-content:center;gap:14px;padding:10px 0 0;max-width:620px}
+  .arco figure{flex:0 0 calc(33.333% - 10px);height:250px;margin-left:0;border-radius:80px 80px 14px 14px}
+  .arco figure:nth-child(n),.arco.linha-1 figure:nth-child(n),.arco.linha-2 figure:nth-child(n){transform:none}
   .acr-q b{font-size:40px}
   .acr-txt{grid-column:2!important;grid-row:auto!important;text-align:left!important}
   .acr-txt::before{content:none!important}
@@ -486,7 +503,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
 @media(max-width:600px){
   .wrap{padding:0 18px}
   .sec{padding:60px 0}
-  .hero{padding:44px 0 60px}
+  .hero{padding:44px 0 290px;background-size:auto 300px}
   .hero-logo{max-width:250px;margin-bottom:18px}
   .hero h1{font-size:clamp(26px,7.4vw,36px)}
   .hero-visual{min-height:330px}
@@ -518,7 +535,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .bm-arrow.next{right:0}
   .price-side{padding:56px 22px 30px}
   .price-box{padding:34px 22px}
-  .arco figure{flex:0 0 calc(50% - 7px);height:206px;border-radius:66px 66px 12px 12px}
+  .arco figure{flex:0 0 calc(50% - 7px);height:224px;border-radius:70px 70px 12px 12px}
   .marquee-bar{padding:18px 0}
   .marquee-track span{font-size:17px;padding:0 14px}
   .strip .marquee-track{padding:18px 0}
@@ -548,21 +565,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
       <p class="sub">O guia completo para alimentares e nutrires o teu bebé com <strong>confiança</strong>, respeitando o seu ritmo e construindo uma relação positiva com a comida.</p>
       <a href="#investimento" class="btn lg">Começar agora</a>
     </div>
-    <div class="hero-visual sr-hidden">
-      <div class="hero-back" aria-hidden="true">
-        <div class="hb hb1"><img src="assets/hero/hb1.jpg" width="700" height="826" alt=""></div>
-        <div class="hb hb2"><img src="assets/hero/hb2.jpg" width="700" height="700" alt=""></div>
-        <div class="hb hb3"><img src="assets/hero/hb3.jpg" width="700" height="784" alt=""></div>
-        <div class="hb hb4"><img src="assets/hero/hb4.jpg" width="700" height="609" alt=""></div>
-      </div>
-      <div class="hero-photo">
-        <span class="prod-glow" aria-hidden="true"></span>
-        <span class="prod-ring" aria-hidden="true"></span>
-        <div class="prod-frame">
-          <img src="assets/ana-hero.jpg" width="900" height="1125" alt="Ana Rodrigues Lopes, nutricionista e autora do curso As Primeiras Comidinhas">
-        </div>
-      </div>
-    </div>
+    <div class="hero-visual" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -728,8 +731,8 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   <div class="orb tl" aria-hidden="true"></div>
   <div class="wrap center">
     <span class="eyebrow coral">Como funciona</span>
-    <h2 class="maxw">Um curso pensado para se adaptar <span class="txt-grad">à tua vida</span> (e não o contrário)</h2>
-    <div class="duv-body" style="margin-top:26px">
+    <h2 class="maxw-lg">Um curso pensado para se adaptar <span class="txt-grad">à tua vida</span> (e não o contrário)</h2>
+    <div class="duv-body duv-body-sm" style="margin-top:26px">
       <p>A vida com um bebé é tudo menos previsível. Há dias em que tudo corre bem e outros em que mal consegues encontrar 10 minutos para ti.<br>Por isso, este curso foi criado para que possas aprender ao teu ritmo, sem pressão e sem horários rígidos.</p>
       <p><b>Ao entrares n'As Primeiras Comidinhas vais receber:</b></p>
     </div>
@@ -787,7 +790,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
       <span class="mcs-ico"><svg viewBox="0 0 24 24"><path d="M3 6h18v11H3z"/><path d="M8 21h8M12 17v4"/><path d="M10.5 9.2l3.4 2-3.4 2z"/></svg></span>
       <div>
         <span class="tag">Masterclass exclusiva</span>
-        <h3>Como ler rótulos e escolher produtos para o teu bebé</h3>
+        <h3>Como ler rótulos e escolher <em>produtos para o teu bebé</em></h3>
         <p>Aprende a interpretar os rótulos dos alimentos e a fazer escolhas mais informadas, sem te deixares influenciar pelo marketing.</p>
       </div>
     </div>
@@ -924,7 +927,9 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
           <p class="pay-note">E ter acesso a um guia completo que te acompanha desde antes da primeira refeição até aos +24 meses do bebé.</p>
         </div>
       </div>
-      <div class="price-side sr-hidden">
+      <div class="price-side-shell sr-hidden">
+        <img class="price-photo" src="assets/ana-card.jpg" width="600" height="800" loading="lazy" alt="Ana Rodrigues Lopes, autora do curso">
+      <div class="price-side">
         <span class="urg">O teu investimento inclui</span>
         <ul>
           <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Curso completo (6 módulos)</li>
@@ -936,8 +941,13 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
           <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span>Acesso durante 12 meses</li>
         </ul>
       </div>
+      </div>
     </div>
-    <p class="price-after sr-hidden">Ao contrário do que muitas famílias pensam, o investimento mais importante na introdução alimentar não é nos utensílios ou nos acessórios &mdash; muitos deles deixam de ser usados alguns meses depois.<br>É, sim, <b>no conhecimento</b> que te permite fazer escolhas informadas, viver esta fase com confiança e proporcionar ao bebé uma verdadeira relação saudável com a comida &mdash; que poderá prevalecer para a vida.</p>
+    <div class="price-after sr-hidden">
+      <p class="pa-lead">Ao contrário do que muitas famílias pensam, o investimento mais importante na introdução alimentar <b>não é nos utensílios ou nos acessórios</b> &mdash; muitos deles deixam de ser usados alguns meses depois.</p>
+      <p class="pa-hi">É, sim, <b>no conhecimento</b>.</p>
+      <p class="pa-sub">Aquele que te permite fazer <mark>escolhas informadas</mark>, viver esta fase com <mark>confiança</mark> e proporcionar ao bebé uma verdadeira <mark>relação saudável com a comida</mark> &mdash; que poderá prevalecer para a vida.</p>
+    </div>
   </div>
 </section>
 
@@ -962,14 +972,18 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
     <h2 class="maxw">O que dizem as famílias <span class="txt-grad">acompanhadas por mim</span></h2>
   </div>
   <div class="wrap">
-    <div class="arco sr-hidden" id="arcoTest">
-      <figure><img src="assets/testemunhos/test-1.jpg" width="744" height="569" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
-      <figure><img src="assets/testemunhos/test-4.jpg" width="900" height="445" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
-      <figure><img src="assets/testemunhos/test-6.jpg" width="834" height="449" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
-      <figure><img src="assets/testemunhos/test-5.jpg" width="863" height="1098" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
-      <figure><img src="assets/testemunhos/test-2.jpg" width="900" height="490" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
-      <figure><img src="assets/testemunhos/test-3.jpg" width="900" height="318" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
-      <figure><img src="assets/testemunhos/test-7.jpg" width="900" height="595" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+    <div class="arco-wrap sr-hidden" id="arcoTest">
+      <div class="arco linha-1">
+        <figure><img src="assets/testemunhos/test-1.jpg" width="744" height="569" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+        <figure><img src="assets/testemunhos/test-4.jpg" width="900" height="445" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+        <figure><img src="assets/testemunhos/test-6.jpg" width="834" height="449" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+        <figure><img src="assets/testemunhos/test-5.jpg" width="863" height="1098" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+      </div>
+      <div class="arco linha-2">
+        <figure><img src="assets/testemunhos/test-2.jpg" width="900" height="490" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+        <figure><img src="assets/testemunhos/test-3.jpg" width="900" height="318" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+        <figure><img src="assets/testemunhos/test-7.jpg" width="900" height="595" loading="lazy" alt="Testemunho de família acompanhada pela Ana Rodrigues Lopes"></figure>
+      </div>
     </div>
     <p class="test-nota sr-hidden">Toca num depoimento para o ler por inteiro.</p>
   </div>
@@ -985,13 +999,6 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   <div class="wrap">
     <div class="sobre-split">
       <div class="sobre-visual sr-hidden">
-        <div class="sobre-photo">
-          <span class="prod-glow" aria-hidden="true"></span>
-          <span class="prod-ring" aria-hidden="true"></span>
-          <div class="prod-frame">
-            <img src="assets/ana-sobre.jpg" width="760" height="1330" loading="lazy" alt="Ana Rodrigues Lopes a preparar alimentos para a introdução alimentar">
-          </div>
-        </div>
         <div class="sobre-seal">
           <div class="seal">
             <div class="seal-glow" aria-hidden="true"></div>
@@ -1005,7 +1012,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
                 <text class="seal-text"><textPath href="#sealBot" startOffset="50%">ORDEM DOS NUTRICIONISTAS</textPath></text>
               </svg>
             </div>
-            <div class="seal-core"><span class="sc-num">CP 2069N</span><span class="sc-lab">Cédula</span></div>
+            <div class="seal-core"></div>
           </div>
         </div>
       </div>
@@ -1033,7 +1040,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
       </div>
     </div>
     <p class="sobre-final sr-hidden">A introdução alimentar não precisa de pais perfeitos.<span>Precisa de pais informados, confiantes e preparados para se adaptarem ao seu bebé.</span></p>
-    <div class="cta-row"><a href="#investimento" class="btn lg">Começar agora</a></div>
+    <div class="cta-row cta-dir"><a href="#investimento" class="btn lg">Começar agora</a></div>
   </div>
 </section>
 
