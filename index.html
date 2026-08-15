@@ -86,9 +86,9 @@ section{position:relative}
 @keyframes ringPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.8;transform:scale(1.02)}}
 @media(prefers-reduced-motion:reduce){.prod-frame::before,.prod-ring,.prod-glow{animation:none}}
 /* HERO */
-.hero{position:relative;padding:132px 0 148px;background:#F7F4EF;overflow:hidden;isolation:isolate}
+.hero{position:relative;padding:132px 0 148px;background:#F7F4EF url("assets/arte/hero-arte.png") center center/cover no-repeat;overflow:hidden;isolation:isolate}
 /* foto limpa (sem mascara, sem fade, sem cantos) a ocupar a metade direita inteira */
-.hero::after{content:"";position:absolute;top:0;right:0;bottom:0;width:48%;z-index:0;pointer-events:none;background:url("assets/arte/hero-foto.jpg") center center/cover no-repeat}
+.hero::after{content:none}
 .hero .wrap{max-width:1320px}
 .hero-grid{display:grid;grid-template-columns:minmax(0,600px) 1fr;gap:52px;align-items:center;position:relative;z-index:2}
 .hero-logo{display:block;width:100%;max-width:360px;height:auto;margin:0 0 24px}
@@ -439,7 +439,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
 @media(max-width:1080px){
   .hero .wrap{padding:0 32px}
   .hero-grid{grid-template-columns:minmax(0,54%) 1fr;gap:24px}
-  .hero::after{width:42%}
+
   .esp-card{flex:0 0 calc(33.333% - 15px)}
   .q-grid{grid-template-columns:repeat(2,1fr);max-width:760px}
   .acr{grid-template-columns:1fr 158px 174px 158px 1fr;gap:10px 12px}
@@ -465,7 +465,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
 @media(max-width:960px){
   /* a arte da expert desce para a base: o texto fica sempre sobre fundo liso */
   .hero{padding:56px 0 330px;background:#F7F4EF}
-  .hero::after{top:auto;right:0;left:0;bottom:0;width:100%;height:330px;background-position:center 38%;-webkit-mask-image:none;mask-image:none}
+  .hero::after{content:"";position:absolute;top:auto;right:0;left:0;bottom:0;width:100%;height:330px;z-index:0;pointer-events:none;background:url("assets/arte/hero-arte.png") 78% center/cover no-repeat}
   .hero .wrap{max-width:1160px}
   .hero-grid{grid-template-columns:1fr;gap:0}
   .hero-visual{display:none}
