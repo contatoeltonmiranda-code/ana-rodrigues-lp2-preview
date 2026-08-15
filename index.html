@@ -303,7 +303,7 @@ section{position:relative}
    a linear derrete a lateral que aponta para o centro, para a foto se fundir
    no fundo sem nenhuma aresta visivel. */
 .of-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.of-bg img{position:absolute;display:block;width:592px;height:auto;opacity:.145;filter:saturate(.55) contrast(.9);
+.of-bg img{position:absolute;display:block;width:592px;height:auto;opacity:.2;filter:saturate(.55) contrast(.9);
   --of-rad:radial-gradient(105% 100% at 50% 50%,#000 4%,rgba(0,0,0,.62) 40%,rgba(0,0,0,.18) 70%,rgba(0,0,0,0) 94%);
   --of-dir:linear-gradient(90deg,#000 0%,#000 24%,rgba(0,0,0,.42) 62%,rgba(0,0,0,0) 97%);
   -webkit-mask-image:var(--of-rad),var(--of-dir);mask-image:var(--of-rad),var(--of-dir);
@@ -311,12 +311,12 @@ section{position:relative}
   -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:100% 100%;mask-size:100% 100%}
 /* fotos do lado direito: o esbatimento tem de correr no sentido inverso */
 .of-bg .b3,.of-bg .b4{--of-dir:linear-gradient(270deg,#000 0%,#000 24%,rgba(0,0,0,.42) 62%,rgba(0,0,0,0) 97%)}
-.of-bg .b1{top:20px;left:-286px;transform:rotate(-5deg)}
-.of-bg .b2{bottom:8px;left:-268px;width:536px;transform:rotate(4deg)}
-.of-bg .b3{bottom:52px;right:-300px;width:568px;transform:rotate(-3.5deg)}
+.of-bg .b1{top:20px;left:-130px;transform:rotate(-5deg)}
+.of-bg .b2{bottom:8px;left:-120px;width:536px;transform:rotate(4deg)}
+.of-bg .b3{bottom:52px;right:-136px;width:568px;transform:rotate(-3.5deg)}
 /* canto superior direito: peca deliberadamente mais discreta (opacidade e
    esbatimento reforcados) para preencher o vazio sem disputar com o H2 */
-.of-bg .b4{top:-46px;right:-236px;width:500px;opacity:.09;transform:rotate(3.5deg);
+.of-bg .b4{top:-46px;right:-106px;width:500px;opacity:.13;transform:rotate(3.5deg);
   --of-rad:radial-gradient(100% 95% at 50% 50%,#000 0%,rgba(0,0,0,.5) 34%,rgba(0,0,0,.12) 66%,rgba(0,0,0,0) 90%);
   --of-dir:linear-gradient(270deg,#000 0%,#000 14%,rgba(0,0,0,.3) 54%,rgba(0,0,0,0) 92%)}
 .sec-oferta>.wrap{position:relative;z-index:1}
@@ -511,11 +511,11 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .price-wrap{flex-direction:column;align-items:stretch;max-width:520px}
   .price-side-shell{flex:auto;align-self:auto;margin-left:0;margin-top:-30px}
   .price-side{border-radius:0 0 22px 22px;padding:60px 30px 34px}
-  .of-bg img{width:325px;opacity:.105}
-  .of-bg .b1{top:18px;left:-152px}
-  .of-bg .b2{width:300px;bottom:18px;left:-140px}
-  .of-bg .b3{width:310px;bottom:56px;right:-148px}
-  .of-bg .b4{width:270px;top:-34px;right:-118px;opacity:.072}
+  .of-bg img{width:325px;opacity:.15}
+  .of-bg .b1{top:18px;left:-68px}
+  .of-bg .b2{width:300px;bottom:18px;left:-62px}
+  .of-bg .b3{width:310px;bottom:56px;right:-66px}
+  .of-bg .b4{width:270px;top:-34px;right:-52px;opacity:.10}
   .price-box-shell{flex:auto;max-width:100%;width:100%}
   .sec-forma .form-box{max-width:620px}
   .sec-forma .res-list{grid-template-columns:1fr;gap:12px}
@@ -582,11 +582,11 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .price-box{padding:34px 22px}
   /* telemovel: so 3 fotos nos cantos (4 grandes poluiam o ecra estreito) e
      ampliacao contida — o dobro do desktop tapava a leitura do H2 */
-  .of-bg img{width:228px;opacity:.072}
-  .of-bg .b1{top:14px;left:-98px}
+  .of-bg img{width:228px;opacity:.10}
+  .of-bg .b1{top:14px;left:-52px}
   .of-bg .b2{display:none}
-  .of-bg .b3{width:214px;bottom:36px;right:-92px}
-  .of-bg .b4{width:186px;top:-26px;right:-84px;opacity:.05}
+  .of-bg .b3{width:214px;bottom:36px;right:-48px}
+  .of-bg .b4{width:186px;top:-26px;right:-44px;opacity:.075}
   .arco figure{flex:0 0 calc(50% - 7px);height:224px;border-radius:70px 70px 12px 12px}
   .marquee-bar{padding:18px 0}
   .marquee-track span{font-size:17px;padding:0 14px}
