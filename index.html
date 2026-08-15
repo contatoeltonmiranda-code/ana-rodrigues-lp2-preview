@@ -86,7 +86,9 @@ section{position:relative}
 @keyframes ringPulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.8;transform:scale(1.02)}}
 @media(prefers-reduced-motion:reduce){.prod-frame::before,.prod-ring,.prod-glow{animation:none}}
 /* HERO */
-.hero{padding:132px 0 148px;background:url("assets/arte/hero-bg.jpg") right center/auto 100% no-repeat,#F7F4EF;overflow:hidden;isolation:isolate}
+.hero{position:relative;padding:132px 0 148px;background:#F7F4EF;overflow:hidden;isolation:isolate}
+/* a arte ocupa a metade direita inteira (cover), sem faixas nem cantos a vista */
+.hero::after{content:"";position:absolute;top:0;right:0;bottom:0;width:48%;z-index:0;pointer-events:none;background:url("assets/arte/hero-bg.jpg") center center/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%);mask-image:linear-gradient(90deg,transparent 0,#000 12%)}
 .hero .wrap{max-width:1320px}
 .hero-grid{display:grid;grid-template-columns:minmax(0,600px) 1fr;gap:52px;align-items:center;position:relative;z-index:2}
 .hero-logo{display:block;width:100%;max-width:360px;height:auto;margin:0 0 24px}
@@ -362,10 +364,10 @@ section{position:relative}
 .tb-close{position:absolute;top:18px;right:20px;width:44px;height:44px;border:none;border-radius:50%;background:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.28)}
 .tb-close svg{width:20px;height:20px;stroke:var(--ink);stroke-width:2.6;fill:none;stroke-linecap:round}
 /* SEC 8 — SOBRE MIM */
-.sec-sobre{position:relative;background:#F1ECF3;overflow:hidden;padding-top:104px;padding-bottom:104px}
+.sec-sobre{position:relative;background:linear-gradient(120deg,#EBEAE7 0%,#EFEBEF 46%,#F1ECF3 100%);overflow:hidden;padding-top:104px;padding-bottom:104px}
 /* arte da expert ancorada na base da coluna esquerda, com fade no topo e a direita */
-.sec-sobre::before{content:"";position:absolute;left:0;bottom:0;z-index:0;pointer-events:none;width:min(46%,640px);height:min(72%,700px);background:url("assets/arte/sobre-bg.jpg") center bottom/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 24%);mask-image:linear-gradient(180deg,transparent 0,#000 24%)}
-.sec-sobre::after{content:"";position:absolute;left:0;bottom:0;z-index:1;pointer-events:none;width:min(54%,760px);height:100%;background:linear-gradient(90deg,rgba(241,236,243,0) 52%,#F1ECF3 94%)}
+.sec-sobre::before{content:"";position:absolute;left:0;bottom:0;z-index:0;pointer-events:none;width:min(44%,700px);aspect-ratio:1400/1421;background:url("assets/arte/sobre-bg.jpg") center bottom/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%),linear-gradient(90deg,transparent 0,#000 7%,#000 76%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent 0,#000 18%),linear-gradient(90deg,transparent 0,#000 7%,#000 76%,transparent 100%);mask-composite:intersect}
+.sec-sobre::after{content:"";position:absolute;left:0;bottom:0;z-index:1;pointer-events:none;width:0;height:0}
 .sec-sobre .wrap{position:relative;z-index:2}
 .sobre-split{display:grid;grid-template-columns:.86fr 1.14fr;gap:52px;align-items:stretch}
 .sobre-visual{position:relative;display:flex;align-items:flex-end;justify-content:flex-end;min-height:420px}
@@ -431,7 +433,13 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
 .foot-links a:hover{color:var(--sage-esc)}
 .foot-copy{font-size:12px;color:var(--texto2);line-height:1.6}
 /* RESPONSIVO */
+@media(max-width:1340px){
+  .hero .wrap{max-width:1160px}
+}
 @media(max-width:1080px){
+  .hero .wrap{padding:0 32px}
+  .hero-grid{grid-template-columns:minmax(0,54%) 1fr;gap:24px}
+  .hero::after{width:42%}
   .esp-card{flex:0 0 calc(33.333% - 15px)}
   .q-grid{grid-template-columns:repeat(2,1fr);max-width:760px}
   .acr{grid-template-columns:1fr 158px 174px 158px 1fr;gap:10px 12px}
@@ -456,12 +464,13 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
 }
 @media(max-width:960px){
   /* a arte da expert desce para a base: o texto fica sempre sobre fundo liso */
-  .hero{padding:56px 0 320px;background:url("assets/arte/hero-bg.jpg") center bottom/auto 330px no-repeat,#F7F4EF}
+  .hero{padding:56px 0 330px;background:#F7F4EF}
+  .hero::after{top:auto;right:0;left:0;bottom:0;width:100%;height:330px;background-position:center 22%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 14%);mask-image:linear-gradient(180deg,transparent 0,#000 14%)}
   .hero .wrap{max-width:1160px}
   .hero-grid{grid-template-columns:1fr;gap:0}
   .hero-visual{display:none}
-  .sec-sobre::before{width:min(64%,330px);height:min(48%,430px)}
-  .sec-sobre::after{width:100%;background:linear-gradient(90deg,rgba(241,236,243,.4) 0%,rgba(241,236,243,.9) 46%,#F1ECF3 100%)}
+  .sec-sobre::before{width:min(72%,360px)}
+  .sec-sobre::after{width:100%;height:100%;background:linear-gradient(90deg,rgba(240,236,240,.42) 0%,rgba(240,236,240,.9) 46%,#F0ECF0 100%)}
   .sobre-final,.cta-dir{margin-left:auto;margin-right:auto;max-width:none}
   .mod-grid{grid-template-columns:repeat(2,1fr);gap:40px 0}
   .mod-card:not(:nth-child(3n+1))::before{content:none}
@@ -503,7 +512,8 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
 @media(max-width:600px){
   .wrap{padding:0 18px}
   .sec{padding:60px 0}
-  .hero{padding:44px 0 290px;background-size:auto 300px}
+  .hero{padding:44px 0 300px}
+  .hero::after{height:300px}
   .hero-logo{max-width:250px;margin-bottom:18px}
   .hero h1{font-size:clamp(26px,7.4vw,36px)}
   .hero-visual{min-height:330px}
