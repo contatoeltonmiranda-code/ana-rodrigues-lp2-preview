@@ -385,7 +385,7 @@ section{position:relative}
 .tb-close{position:absolute;top:18px;right:20px;width:44px;height:44px;border:none;border-radius:50%;background:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.28)}
 .tb-close svg{width:20px;height:20px;stroke:var(--ink);stroke-width:2.6;fill:none;stroke-linecap:round}
 /* SEC 8 — SOBRE MIM */
-.sec-sobre{position:relative;background:linear-gradient(120deg,#EBEAE7 0%,#EFEBEF 46%,#F1ECF3 100%);overflow:hidden;padding-top:104px;padding-bottom:200px}
+.sec-sobre{position:relative;background:linear-gradient(120deg,#EBEAE7 0%,#EFEBEF 46%,#F1ECF3 100%);overflow:hidden;padding-top:104px;padding-bottom:75px}
 /* arte da expert ancorada na base da coluna esquerda, com fade no topo e a direita */
 .sec-sobre::before{content:"";position:absolute;left:0;top:0;bottom:0;z-index:0;pointer-events:none;width:min(48%,760px);background:url("assets/arte/sobre-bg.jpg") center center/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 18%),linear-gradient(90deg,transparent 0,#000 7%,#000 76%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent 0,#000 18%),linear-gradient(90deg,transparent 0,#000 7%,#000 76%,transparent 100%);mask-composite:intersect}
 .sec-sobre::after{content:"";position:absolute;left:0;bottom:0;z-index:1;pointer-events:none;width:0;height:0}
@@ -405,7 +405,7 @@ section{position:relative}
 /* SEC 8b — FORMACAO (bloco saido de dentro do "Sobre mim") */
 .sec-forma{background:var(--cream);overflow:visible;padding-top:0;margin-top:0}
 .sec-forma .form-box{position:relative;z-index:2;box-shadow:0 26px 60px rgba(176,92,56,.16)}
-.sec-forma .form-box{margin:-170px auto 0;max-width:920px;padding:34px 38px}
+.sec-forma .form-box{position:relative;top:-75px;margin:0 auto -75px;max-width:920px;padding:34px 38px}
 .sec-forma .form-box::after{left:38px;width:78px}
 .sec-forma .form-box h3{font-size:24px;margin-bottom:22px}
 .sec-forma .form-box h3 .fh{width:40px;height:40px}
@@ -520,7 +520,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
   .of-bg .b3{width:310px;bottom:56px;right:-66px}
   .of-bg .b4{width:270px;top:-34px;right:-52px;opacity:.10}
   .price-box-shell{flex:auto;max-width:100%;width:100%}
-  .sec-forma .form-box{max-width:620px;margin:-100px auto 0}
+  .sec-forma .form-box{max-width:620px;top:-75px;margin:0 auto -75px}
   .sec-forma .res-list{grid-template-columns:1fr;gap:12px}
   .sobre-split{grid-template-columns:1fr;gap:60px}
   .sobre-visual{order:-1;max-width:360px;margin:0 auto}
@@ -550,6 +550,7 @@ footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;b
 @media(max-width:600px){
   .wrap{padding:0 18px}
   .sec{padding:60px 0}
+  .sec-forma{padding-top:0;padding-bottom:60px}
   .hero{padding:44px 0 300px}
   .hero::after{height:300px}
   .hero-logo{max-width:250px;margin-bottom:18px}
